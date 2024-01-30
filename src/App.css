@@ -113,6 +113,10 @@
   border-radius: 35px;
   color: white;
   cursor: pointer;
+  width: calc(100% - 40px); /* Adjust width to account for padding */
+  margin-bottom: 20px; /* 20px gap between each component */
+  padding: 10px;
+  
 }
 
 
@@ -120,9 +124,10 @@
   border: none;
   background: none;
   padding: 10px;
+
 }
 
-.page-container.next-button {
+.page-container .next-button {
   border: none;
   border-radius: 35px;
   background-color: #00B882;
@@ -130,6 +135,6 @@
   cursor: pointer;
 }
 
-.next-button:hover {
+.page-container .next-button:hover {
   background-color: #008B4B;
 }
