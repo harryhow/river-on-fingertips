@@ -1,38 +1,59 @@
-.App {
+.app-background {
+  background-image: url('general-bg.png'); /* Replace with your actual image path */
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login-form input,
+.login-form button,
+.login-form .toggle-user-type {
+  width: calc(100% - 40px); /* Adjust width to account for padding */
+  margin-bottom: 20px; /* 20px gap between each component */
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-form input {
+  border: 1px solid #ccc;
+  border-radius: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.login-form button {
+  border: none;
+  border-radius: 35px;
+  background-color: #00B882;
   color: white;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.login-form button:hover {
+  background-color: #008B4B;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-form .submit-button {
+  /* Additional styles for the submit button if needed */
+}
+
+.login-form .toggle-user-type {
+  display: inline-block;
+  color: gray;
+  font-size: 0.8em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-form .toggle-user-type:hover {
+  text-decoration: none;
 }
