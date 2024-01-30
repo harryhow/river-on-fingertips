@@ -1,4 +1,4 @@
-.app-background {
+.app-background, .page-container {
   background-image: url('general-bg.png'); /* Replace with your actual image path */
   height: 100vh;
   background-size: cover;
@@ -62,4 +62,74 @@
 
 .login-form h1 {
   color: #008B4B; /* Sets the text color of all <h1> elements */
+}
+
+
+
+.page-container {
+  text-align: center;
+  /* Add other styles as necessary */
+}
+
+.options-container {
+  /* Styles for the container of the options */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.option-button {
+  border: none;
+  background: none;
+  padding: 10px;
+}
+
+.option-button.selected {
+  border: 2px solid blue; /* Highlight the selected button */
+}
+
+.option-button img {
+  width: 100px; /* Adjust as necessary */
+  height: auto;
+}
+
+
+
+
+/* Question page button */
+
+.page-container {
+  max-width: 400px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.page-container button {
+  border: none;
+  border-radius: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.page-container option-button {
+  border: none;
+  background: none;
+  padding: 10px;
+}
+
+.page-container.next-button {
+  border: none;
+  border-radius: 35px;
+  background-color: #00B882;
+  color: white;
+  cursor: pointer;
+}
+
+.next-button:hover {
+  background-color: #008B4B;
 }

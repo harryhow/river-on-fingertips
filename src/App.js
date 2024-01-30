@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
-import './App.css'; // Assuming you have an App.css file for your styles
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import './App.css'; // This imports the styles from App.css
+import AssignQstnOne from './AssignQuestionOne'; // Make sure this path is correct
 
-const App = () => {
+
+const LoginForm = () => {
   const [studentId, setStudentId] = useState('');
   const [isTeacher, setIsTeacher] = useState(false);
+  let navigate = useNavigate();
 
   const handleIdChange = (event) => {
     setStudentId(event.target.value);
@@ -15,11 +19,9 @@ const App = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (isTeacher) {
-      // Logic for teacher submission
-    } else {
-      // Logic for student submission
-    }
+    // Here you would typically handle your form validation and submission
+    // For example purposes, we are just navigating to the next page
+    navigate('/assign-question-one');
   };
 
   return (
@@ -35,18 +37,28 @@ const App = () => {
           />
           <button type="submit" className="submit-button">確定</button>
         </form>
-
-
         <button 
           onClick={toggleUserType} 
           className="toggle-user-type"
           style={{ background: 'none', border: 'none', padding: 0, margin: 0, color: 'gray', textDecoration: 'underline' }}
         >
-          {isTeacher ? '切換到學生' : '切換到老師'}
-      </button>
-
+          {isTeacher ? '切換到學生身份' : '切換到老師身份'}
+        </button>
       </div>
     </div>
+  );
+};
+
+
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/assign-question-one" element={<AssignQstnOne />} />
+      </Routes>
+    </Router>
   );
 };
 
