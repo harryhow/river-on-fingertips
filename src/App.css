@@ -65,7 +65,6 @@
 }
 
 
-
 .page-container {
   text-align: center;
   /* Add other styles as necessary */
@@ -79,14 +78,10 @@
   margin: 20px 0;
 }
 
-.option-button {
-  border: none;
-  background: none;
-  padding: 10px;
-}
+
 
 .option-button.selected {
-  border: 2px solid blue; /* Highlight the selected button */
+  transform: scale(1.1); /* Scale up when selected */
 }
 
 .option-button img {
@@ -94,11 +89,45 @@
   height: auto;
 }
 
+.options-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
 
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.option img {
+  max-width: 100px; /* Adjust the width as needed */
+  max-height: 100px; /* Set a fixed maximum height */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the image fits within the dimensions */
+}
+
+.option-button {
+  background-color: transparent; /* Remove background */
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  height: 100px; /* Set the height of the button to ensure uniformity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.option-description {
+  margin-top: 10px;
+  align-self: flex-start; /* Align descriptions independently */
+}
 
 
 /* Question page button */
-
 .page-container {
   max-width: 400px;
   margin: auto;
@@ -115,8 +144,7 @@
   cursor: pointer;
   width: calc(100% - 40px); /* Adjust width to account for padding */
   margin-bottom: 20px; /* 20px gap between each component */
-  padding: 10px;
-  
+  padding: 10px; 
 }
 
 
@@ -124,7 +152,6 @@
   border: none;
   background: none;
   padding: 10px;
-
 }
 
 .page-container .next-button {
@@ -138,3 +165,5 @@
 .page-container .next-button:hover {
   background-color: #008B4B;
 }
+
+
