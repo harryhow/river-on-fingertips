@@ -15,7 +15,7 @@ const AssignQstnOne = () => {
     setSelectedOption(option);
   };
 
-  const handleNextButtonClick = () => {
+  const handleNextButtonClick = (event) => {
     console.log('Next button clicked with option: ', selectedOption);
     // Add navigation logic if needed, e.g., navigate('/next-page');
     event.preventDefault();
