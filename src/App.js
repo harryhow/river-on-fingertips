@@ -35,9 +35,16 @@ const App = () => {
           />
           <button type="submit" className="submit-button">確定</button>
         </form>
-        <a href="/path-to-teacher" onClick={toggleUserType} className="toggle-user-type">
+
+
+        <button 
+          onClick={toggleUserType} 
+          className="toggle-user-type"
+          style={{ background: 'none', border: 'none', padding: 0, margin: 0, color: 'gray', textDecoration: 'underline' }}
+        >
           {isTeacher ? '切換到學生' : '切換到老師'}
-        </a>
+      </button>
+
       </div>
     </div>
   );
