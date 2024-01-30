@@ -2,6 +2,8 @@
   background-image: url('general-bg.png'); /* Replace with your actual image path */
   height: 100vh;
   background-size: cover;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center; /* Center the image in the container */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,4 +58,8 @@
 
 .login-form .toggle-user-type:hover {
   text-decoration: none;
+}
+
+.login-form h1 {
+  color: #008B4B; /* Sets the text color of all <h1> elements */
 }
