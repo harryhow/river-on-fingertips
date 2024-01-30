@@ -18,6 +18,10 @@ const AssignQstnOne = () => {
   const handleNextButtonClick = () => {
     console.log('Next button clicked with option: ', selectedOption);
     // Add navigation logic if needed, e.g., navigate('/next-page');
+    event.preventDefault();
+    // Here you would typically handle your form validation and submission
+    // For example purposes, we are just navigating to the next page
+    navigate('/assign-question-two');
   };
 
   return (
